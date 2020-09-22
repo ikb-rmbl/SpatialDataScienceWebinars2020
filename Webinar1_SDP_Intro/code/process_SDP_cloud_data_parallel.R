@@ -24,7 +24,7 @@ rasterOptions(maxmemory=8e+9,memfrac=0.8)
 ##creates a raster object from a cloud-based source
 ##Get data frome with all available SDP data products.
 sdp_prods <- read.csv("https://www.rmbl.org/wp-content/uploads/2020/06/SDP_product_table_6_8_2020.csv")
-View(sdp_prods)
+#View(sdp_prods)
 
 ##Creates raster objects from cloud-based datasets.
 dem_uri <- as.character(sdp_prods$Data.URL[sdp_prods$Product=="Digital Elevation Model"])
@@ -58,7 +58,10 @@ total_elapsed <- end_time - start_time
 total_elapsed
 
 ##set up the tiling scheme for processing larger areas.
-tiles <- tileScheme(dem,tiledim=c(100,100),buffer=5)
+tiles <- tileScheme(dem,tiledim=c(5000,5000),buffer=5)
+
+#plot(dem,maxpixels=5000)
+plot(tiles)
 
 ##create and register a parallel backend.
 #cl <- makeCluster(parallel::detectCores()-2,outfile="")
@@ -70,15 +73,14 @@ registerDoParallel(cl)
 
 ##creates a parallel foreach loop to process each tile.
 start_time <- Sys.time()
-out_tiles <- foreach(i=1:length(tiles$buffPolygons),
+out_tiles <- foreach(i=1:length(tiles@buffs),
                      .packages=c("raster")) %dopar% {
   
-  tile_extent <- extent(bbox(tiles$buffPolygons[i,]))
+  tile_extent <- extent(bbox(tiles@buffs[[i]]@Polygons[[1]]@coords))
   tile <- crop(dem,tile_extent)
   tile_slope <- terrain(tile,opt="slope",
                         progress="text")
-  out_extent <- extent(bbox(tiles$nbuffPolygons[i,]))
-  tile_filename <- 
+  out_extent <- extent(bbox(tiles@nbuffs[[i]]@Polygons[[1]]@coords))
   tile_slope_crop <- crop(tile_slope,out_extent)
   
   (tile_slope_crop)
