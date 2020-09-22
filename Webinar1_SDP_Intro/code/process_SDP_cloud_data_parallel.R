@@ -33,7 +33,7 @@ dem <- raster(dem_path, progress='text')
 dem
 
 flow_uri <- as.character(sdp_prods$Data.URL[sdp_prods$Product=="Multi-direction Flow Accumulation"])
-flow <- raster(paste(basepath,"UER_flow_accum_mfd_1m_v1.tif",sep=""),
+flow <- raster(paste("/vsicurl/",flow_uri,sep=""),
                progress='text')
 
 ##study area of interest
@@ -58,7 +58,7 @@ total_elapsed <- end_time - start_time
 total_elapsed
 
 ##set up the tiling scheme for processing larger areas.
-tiles <- TileScheme(dem,dimByDist=500,buffer=5)
+tiles <- tileScheme(dem,tiledim=c(100,100),buffer=5)
 
 ##create and register a parallel backend.
 #cl <- makeCluster(parallel::detectCores()-2,outfile="")
