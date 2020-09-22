@@ -103,6 +103,9 @@ gothic_samples <- extract(coarse_stack,gothic_samples,method="bilinear",sp=TRUE)
 gothic_samples$east <- coordinates(gothic_samples)[,1]
 gothic_samples$north <- coordinates(gothic_samples)[,2]
 
+##Writes extracted data to disk.
+st_write(st_as_sf(gothic_samples),"gothic_samples.gpkg")
+
 ##plots original vs resampled data.
 p1 <- ggplot(gothic_samples@data)+
   geom_point(aes(x=dem,y=dem_100m))+
@@ -132,24 +135,23 @@ gridExtra::grid.arrange(p1,p2,p3,ncol=3)
 
 
 ##converts water data to polygons (this is slow).
-water_poly <- st_as_sf(rasterToPolygons(gothic_stack$water))
 flow_poly <- st_as_sf(rasterToPolygons(gothic_stack$flow_log,fun=function(x){x>11}))
+water_poly <- st_as_sf(rasterToPolygons(gothic_stack$water))
+
 
 ##plots the hillshade and adds sampling points
 plot(gothic_stack$hillshade,ext=gothic_extent,
      main="Gothic Sample Points",
      col=hcl.colors(n=50,palette="Grays",rev=FALSE))
-plot(water_poly,add=TRUE,col="slateblue")
 plot(flow_poly,add=TRUE,col="slateblue")
 points(gothic_samples,pch="+",cex=1,col="white")
 
 ##makes a prettier plot with ggplot2, rasterVis, and ggspatial
 gplot <- gplot(gothic_stack$hillshade,maxpixels=500000)+
   geom_raster(aes(fill=value),interpolate=TRUE)+
-  scale_fill_gradient(low = 'black', high = 'white',
-                      guide = guide_none()) +
-  layer_spatial(water_poly,aes(color="water"))+
+  scale_fill_gradient(low = 'black', high = 'white') +
   layer_spatial(flow_poly,color="slateblue")+
+  
   geom_point(aes(x=east,y=north,color="sites"),
              data=gothic_samples@data,
              shape="+",size=5)+
@@ -163,7 +165,8 @@ gplot <- gplot(gothic_stack$hillshade,maxpixels=500000)+
                    tick_height=0,text_col="white",line_col="white")+
   guides(color = guide_legend(override.aes = list(fill=c("grey80","slateblue"),
                                                   linetype = c(0, 0),
-                                                  shape = c(43, 15))))+
+                                                  shape = c(43, 15))),
+         fill = FALSE)+
   theme_bw()+
   theme(legend.position=c(0.85,0.85))
 
