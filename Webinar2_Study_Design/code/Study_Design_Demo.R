@@ -149,7 +149,8 @@ lhs_values <- as.data.frame(randomLHS(100,4))
 colnames(lhs_values) <- c("elevation","aspect","x","y")
 lhs_values
 
-## Loop through each row and find the site with the smallest euclidean distance to the 100 hypercube points.
+## Loop through each row and find the site with the smallest 
+## euclidean distance to the 100 hypercube points.
 suitable_sites <- dplyr::filter(reference_sf,suitable==1)
 suitable_sub <- cbind(suitable_sites$dem,suitable_sites$aspect,
                       suitable_sites$x,suitable_sites$y)
@@ -179,6 +180,9 @@ lhs_plot <- gplot(gothic_stack$landcover,maxpixels=500000)+
   coord_sf(expand=0, label_axes="--EN") +
   theme_bw() 
 lhs_plot
+
+##Compares the three designs.
+grid.arrange(simple_plot,stratified_plot,lhs_plot,ncol=3)
 
 ####Writes the three sampling designs to disk as geopackages.
 write_sf(simple_sample,dsn="./Webinar2_Study_Design/output/simple_samples_n100.gpkg")
