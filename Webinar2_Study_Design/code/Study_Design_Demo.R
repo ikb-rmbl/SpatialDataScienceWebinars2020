@@ -188,3 +188,34 @@ grid.arrange(simple_plot,stratified_plot,lhs_plot,ncol=3)
 write_sf(simple_sample,dsn="./Webinar2_Study_Design/output/simple_samples_n100.gpkg")
 write_sf(stratified_sample,dsn="./Webinar2_Study_Design/output/stratified_samples_n100.gpkg")
 write_sf(lhs_sample,dsn="./Webinar2_Study_Design/output/lhs_samples_n100.gpkg")
+
+####Assesses the representativeness and coverage of each design compared to the sampling frame.
+
+##Kolmogorov's D
+simple_ks_elev <- ks.test(simple_sample$dem,suitable_sites$dem)
+simple_ks_elev
+simple_ks_asp <- ks.test(simple_sample$aspect,suitable_sites$aspect)
+
+stratified_ks_elev <- ks.test(stratified_sample$dem,suitable_sites$dem)
+stratified_ks_asp <- ks.test(stratified_sample$aspect,suitable_sites$aspect)
+
+lhs_ks_elev <- ks.test(lhs_sample$dem,suitable_sites$dem)
+lhs_ks_asp <- ks.test(lhs_sample$aspect,suitable_sites$aspect)
+
+d_elev <- c(simple=simple_ks_elev$statistic,
+            stratified=stratified_ks_elev$statistic,
+            latin_hypercube=lhs_ks_elev$statistic)
+
+d_asp <- c(simple=simple_ks_asp$statistic,
+            stratified=stratified_ks_asp$statistic,
+            latin_hypercube=lhs_ks_asp$statistic)
+
+##Quantiles.
+suitable_quantiles_elev <- quantile(suitable_sites$dem,prob=c(0.01,0.05,0.5,0.95,0.99))
+suitable_quantiles_elev
+simple_quantiles_elev <- quantile(simple_sample$dem,prob=c(0.01,0.05,0.5,0.95,0.99))
+simple_quantiles_elev
+stratified_quantiles_elev <- quantile(stratified_sample$dem,prob=c(0.01,0.05,0.5,0.95,0.99))
+stratified_quantiles_elev
+lhs_quantiles_elev <- quantile(lhs_sample$dem,prob=c(0.01,0.05,0.5,0.95,0.99))
+lhs_quantiles_elev
