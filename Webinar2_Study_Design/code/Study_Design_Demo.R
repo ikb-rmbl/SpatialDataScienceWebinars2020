@@ -156,15 +156,15 @@ suitable_sub <- cbind(suitable_sites$dem,suitable_sites$aspect,
                       suitable_sites$x,suitable_sites$y)
 
 ## Rescales each variable to the interval 0,1.
-suitable_scale <- scale(suitable_sub)
-lhs_trans <- scale(lhs_values)
+rescale_fun <- function(x){(x - min(x))/(max(x)-min(x))}
+suitable_scale <- apply(suitable_sub,FUN=rescale_fun,MARGIN=2)
 
 ## Creates a data frame with the right shape
 lhs_sample <- suitable_sites[1:100,]
 
 for(i in 1:nrow(lhs_trans)){
   print(paste("Finding most similar point for hypercube row",i))
-  distances <- pdist(X=suitable_scale,Y=lhs_trans[i,])
+  distances <- pdist(X=suitable_scale,Y=lhs_values[i,])
   lhs_sample[i,] <- suitable_sites[which.min(distances@dist),]
 }
 
@@ -210,7 +210,7 @@ d_asp <- c(simple=simple_ks_asp$statistic,
             stratified=stratified_ks_asp$statistic,
             latin_hypercube=lhs_ks_asp$statistic)
 
-##Quantiles.
+##Compare quantiles to assess feature coverage.
 suitable_quantiles_elev <- quantile(suitable_sites$dem,prob=c(0.01,0.05,0.5,0.95,0.99))
 suitable_quantiles_elev
 simple_quantiles_elev <- quantile(simple_sample$dem,prob=c(0.01,0.05,0.5,0.95,0.99))
@@ -219,3 +219,18 @@ stratified_quantiles_elev <- quantile(stratified_sample$dem,prob=c(0.01,0.05,0.5
 stratified_quantiles_elev
 lhs_quantiles_elev <- quantile(lhs_sample$dem,prob=c(0.01,0.05,0.5,0.95,0.99))
 lhs_quantiles_elev
+
+##Plot to assess coverage.
+simple_feature_plot <- ggplot(suitable_sites)+
+                        geom_point(aes(x=dem,y=aspect),size=0.1,color="grey80")+
+                        geom_point(aes(x=dem,y=aspect),size=1,color="slateblue",
+                                   data=simple_sample)+
+                        ggtitle("Simple Random Sampling,n=100")+
+                        theme_bw()
+lhs_feature_plot <- ggplot(suitable_sites)+
+                        geom_point(aes(x=dem,y=aspect),size=0.1,color="grey80")+
+                        geom_point(aes(x=dem,y=aspect),size=1,color="slateblue",
+                                   data=lhs_sample)+
+                        ggtitle("Latin Hypercube Sampling,n=100")+
+                        theme_bw()
+grid.arrange(simple_feature_plot,lhs_feature_plot,ncol=2)
