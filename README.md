@@ -8,8 +8,8 @@ The schedule for the series is below:
 Introduction to the RMBL Spatial Data Platform. How to access RMBL SDP data in GIS and programming environments, and where we are going with the platform.
 [Slides](https://github.com/ikb-rmbl/SpatialDataScienceWebinars2020/blob/master/Webinar1_SDP_Intro/slides/SpatialDataScienceWebinar1_SDP_Intro.pdf) | Notes | Resources | [Webinar Recording](https://youtu.be/0PdRIbA0QJM)
 
-# Tuesday October 20th 2020 
-Designing Robust Field Studies using Geospatial Tools. How to optimize site selection using GIS and the RMBL SDP.
+# Tuesday October 27th 2020 
+Designing Robust Field Studies using Geospatial Tools. How to optimize site selection using geospatial tools and datasets from the RMBL Spatial Data Platform. [Slides](https://github.com/ikb-rmbl/SpatialDataScienceWebinars2020/blob/master/Webinar2_Study_Design/slides/SpatialDataScienceWebinar2_study_design.pdf) | Notes | Resources | [Webinar Recording](https://youtu.be/X5y1tj8mhZo)
 
 # Tuesday January 26th, 2021 
 Successful Drone Data Collection in Mountain Environments. How to design and execute UAS flights for high-quality scientific data in challenging environments.
