@@ -12,7 +12,7 @@ Introduction to the RMBL Spatial Data Platform. How to access RMBL SDP data in G
 Designing Robust Field Studies using Geospatial Tools. How to optimize site selection using geospatial tools and datasets from the RMBL Spatial Data Platform. [Slides](https://github.com/ikb-rmbl/SpatialDataScienceWebinars2020/blob/master/Webinar2_Study_Design/slides/SpatialDataScienceWebinar2_study_design.pdf) | Notes | Resources | [Webinar Recording](https://youtu.be/X5y1tj8mhZo)
 
 # Tuesday January 26th, 2021 
-Successful Drone Data Collection in Mountain Environments. How to design and execute UAS flights for high-quality scientific data in challenging environments.
+Successful Drone Data Collection in Mountain Environments. How to design and execute UAS flights for high-quality scientific data in challenging environments. [Slides](https://github.com/ikb-rmbl/SpatialDataScienceWebinars2020/blob/master/Webinar3_Drone_Planning/slides/SpatialDataScienceWebinar3_drones.pdf)| Notes | [Resources](https://github.com/ikb-rmbl/SpatialDataScienceWebinars2020/tree/master/Webinar3_Drone_Planning/resources) | [Webinar Recording](https://youtu.be/Pq8btEZRCvM)
 
 # Tuesday February 23rd, 2021 
 Leveraging Point Cloud Data from Lidar and UAS Photogrammetry. Mapping vegetation structure and function using 3D data from lidar and drones.
