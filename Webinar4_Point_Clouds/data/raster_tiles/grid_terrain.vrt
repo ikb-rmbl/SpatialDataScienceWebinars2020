@@ -1,0 +1,200 @@
+<VRTDataset rasterXSize="1001" rasterYSize="502">
+  <SRS>PROJCS["WGS 84 / UTM zone 13N",GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",-105],PARAMETER["scale_factor",0.9996],PARAMETER["false_easting",500000],PARAMETER["false_northing",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","32613"]]</SRS>
+  <GeoTransform>  3.2758750000000000e+05,  5.0000000000000000e-01,  0.0000000000000000e+00,  4.3138450000000000e+06,  0.0000000000000000e+00, -5.0000000000000000e-01</GeoTransform>
+  <VRTRasterBand dataType="Float32" band="1">
+    <NoDataValue>-999999</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">chunk_1.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="25" RasterYSize="12" DataType="Float32" BlockXSize="25" BlockYSize="12" />
+      <SrcRect xOff="0" yOff="0" xSize="25" ySize="12" />
+      <DstRect xOff="0" yOff="490" xSize="25" ySize="12" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">chunk_2.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="200" RasterYSize="12" DataType="Float32" BlockXSize="200" BlockYSize="10" />
+      <SrcRect xOff="0" yOff="0" xSize="200" ySize="12" />
+      <DstRect xOff="25" yOff="490" xSize="200" ySize="12" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">chunk_3.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="200" RasterYSize="12" DataType="Float32" BlockXSize="200" BlockYSize="10" />
+      <SrcRect xOff="0" yOff="0" xSize="200" ySize="12" />
+      <DstRect xOff="225" yOff="490" xSize="200" ySize="12" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">chunk_4.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="200" RasterYSize="12" DataType="Float32" BlockXSize="200" BlockYSize="10" />
+      <SrcRect xOff="0" yOff="0" xSize="200" ySize="12" />
+      <DstRect xOff="425" yOff="490" xSize="200" ySize="12" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">chunk_5.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="200" RasterYSize="12" DataType="Float32" BlockXSize="200" BlockYSize="10" />
+      <SrcRect xOff="0" yOff="0" xSize="200" ySize="12" />
+      <DstRect xOff="625" yOff="490" xSize="200" ySize="12" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">chunk_6.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="176" RasterYSize="12" DataType="Float32" BlockXSize="176" BlockYSize="11" />
+      <SrcRect xOff="0" yOff="0" xSize="176" ySize="12" />
+      <DstRect xOff="825" yOff="490" xSize="176" ySize="12" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">chunk_7.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="25" RasterYSize="200" DataType="Float32" BlockXSize="25" BlockYSize="81" />
+      <SrcRect xOff="0" yOff="0" xSize="25" ySize="200" />
+      <DstRect xOff="0" yOff="290" xSize="25" ySize="200" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">chunk_8.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="200" RasterYSize="200" DataType="Float32" BlockXSize="200" BlockYSize="10" />
+      <SrcRect xOff="0" yOff="0" xSize="200" ySize="200" />
+      <DstRect xOff="25" yOff="290" xSize="200" ySize="200" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">chunk_9.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="200" RasterYSize="200" DataType="Float32" BlockXSize="200" BlockYSize="10" />
+      <SrcRect xOff="0" yOff="0" xSize="200" ySize="200" />
+      <DstRect xOff="225" yOff="290" xSize="200" ySize="200" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">chunk_10.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="200" RasterYSize="200" DataType="Float32" BlockXSize="200" BlockYSize="10" />
+      <SrcRect xOff="0" yOff="0" xSize="200" ySize="200" />
+      <DstRect xOff="425" yOff="290" xSize="200" ySize="200" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">chunk_11.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="200" RasterYSize="200" DataType="Float32" BlockXSize="200" BlockYSize="10" />
+      <SrcRect xOff="0" yOff="0" xSize="200" ySize="200" />
+      <DstRect xOff="625" yOff="290" xSize="200" ySize="200" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">chunk_12.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="176" RasterYSize="200" DataType="Float32" BlockXSize="176" BlockYSize="11" />
+      <SrcRect xOff="0" yOff="0" xSize="176" ySize="200" />
+      <DstRect xOff="825" yOff="290" xSize="176" ySize="200" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">chunk_13.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="25" RasterYSize="200" DataType="Float32" BlockXSize="25" BlockYSize="81" />
+      <SrcRect xOff="0" yOff="0" xSize="25" ySize="200" />
+      <DstRect xOff="0" yOff="90" xSize="25" ySize="200" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">chunk_14.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="200" RasterYSize="200" DataType="Float32" BlockXSize="200" BlockYSize="10" />
+      <SrcRect xOff="0" yOff="0" xSize="200" ySize="200" />
+      <DstRect xOff="25" yOff="90" xSize="200" ySize="200" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">chunk_15.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="200" RasterYSize="200" DataType="Float32" BlockXSize="200" BlockYSize="10" />
+      <SrcRect xOff="0" yOff="0" xSize="200" ySize="200" />
+      <DstRect xOff="225" yOff="90" xSize="200" ySize="200" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">chunk_16.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="200" RasterYSize="200" DataType="Float32" BlockXSize="200" BlockYSize="10" />
+      <SrcRect xOff="0" yOff="0" xSize="200" ySize="200" />
+      <DstRect xOff="425" yOff="90" xSize="200" ySize="200" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">chunk_17.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="200" RasterYSize="200" DataType="Float32" BlockXSize="200" BlockYSize="10" />
+      <SrcRect xOff="0" yOff="0" xSize="200" ySize="200" />
+      <DstRect xOff="625" yOff="90" xSize="200" ySize="200" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">chunk_18.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="176" RasterYSize="200" DataType="Float32" BlockXSize="176" BlockYSize="11" />
+      <SrcRect xOff="0" yOff="0" xSize="176" ySize="200" />
+      <DstRect xOff="825" yOff="90" xSize="176" ySize="200" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">chunk_19.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="25" RasterYSize="89" DataType="Float32" BlockXSize="25" BlockYSize="81" />
+      <SrcRect xOff="0" yOff="0" xSize="25" ySize="89" />
+      <DstRect xOff="0" yOff="1" xSize="25" ySize="89" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">chunk_20.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="200" RasterYSize="89" DataType="Float32" BlockXSize="200" BlockYSize="10" />
+      <SrcRect xOff="0" yOff="0" xSize="200" ySize="89" />
+      <DstRect xOff="25" yOff="1" xSize="200" ySize="89" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">chunk_21.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="200" RasterYSize="89" DataType="Float32" BlockXSize="200" BlockYSize="10" />
+      <SrcRect xOff="0" yOff="0" xSize="200" ySize="89" />
+      <DstRect xOff="225" yOff="1" xSize="200" ySize="89" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">chunk_22.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="200" RasterYSize="89" DataType="Float32" BlockXSize="200" BlockYSize="10" />
+      <SrcRect xOff="0" yOff="0" xSize="200" ySize="89" />
+      <DstRect xOff="425" yOff="1" xSize="200" ySize="89" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">chunk_23.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="200" RasterYSize="90" DataType="Float32" BlockXSize="200" BlockYSize="10" />
+      <SrcRect xOff="0" yOff="0" xSize="200" ySize="90" />
+      <DstRect xOff="625" yOff="0" xSize="200" ySize="90" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">chunk_24.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="176" RasterYSize="90" DataType="Float32" BlockXSize="176" BlockYSize="11" />
+      <SrcRect xOff="0" yOff="0" xSize="176" ySize="90" />
+      <DstRect xOff="825" yOff="0" xSize="176" ySize="90" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+</VRTDataset>
