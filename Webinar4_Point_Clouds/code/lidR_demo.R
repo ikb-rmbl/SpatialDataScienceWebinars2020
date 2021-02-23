@@ -1,11 +1,13 @@
 ##Demo script for point cloud processing using lidR
 
 ##Sets up workspace
+##install.packages(c("lidR","raster","rgdal","sf","future"))
 library(lidR)
 library(raster)
 library(rgdal)
 library(sf)
 library(future)
+setwd("~/code/SpatialDataScienceWebinars2020")
 
 ####Basic processing demo.
 
