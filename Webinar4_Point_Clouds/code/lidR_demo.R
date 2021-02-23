@@ -13,17 +13,19 @@ setwd("~/code/SpatialDataScienceWebinars2020")
 
 ##Loads point clouds
 lidar_tile <- readLAS("./Webinar4_Point_Clouds/data/LiDAR_tiles/Gothic_LiDAR_pointcloud_2019_tile1.laz")
+lidar_tile
 sfm_tile <- readLAS("./Webinar4_Point_Clouds/data/SfM_tiles/Gothic_SfM_pointcloud_2019_tile1.laz")
-summary(lidar_tile)
-summary(sfm_tile)
+sfm_tile
 
-##Note that this is a subsampled version of the SfM cloud, the original is more than 300 pts/m2
+##Note that this is a subsampled version of the SfM cloud, 
+##the original is more than 300 pts/m2
 
 ##Visualizes LiDAR cloud with rgl.
-#plot(lidar_tile, color = "Intensity", bg = "white", axis = TRUE, legend = TRUE)
+plot(lidar_tile, color = "Intensity", bg = "white", axis = TRUE, 
+     legend = TRUE)
 
 ##Visualizes SfM cloud (slow)
-#plot(sfm_tile, color = "RGB", bg = "white", axis = TRUE)
+plot(sfm_tile, color = "RGB", bg = "white", axis = TRUE)
 
 ##Classifies ground points using a CSF filter.
 sfm_classed <- classify_ground(sfm_tile,last_returns=FALSE, 
@@ -31,30 +33,32 @@ sfm_classed <- classify_ground(sfm_tile,last_returns=FALSE,
                                              cloth_resolution=0.7,
                                              rigidness=3))
 ##Plots ground points.
-#plot(sfm_classed,color="Classification")
+plot(sfm_classed,color="Classification")
 
 ##Interpolates ground points to create a smooth DEM.
 sfm_dem <- grid_terrain(sfm_classed,use_class=2,res=0.5,
                         algorithm=tin())
 
-#plot(sfm_dem)
-
-##This is a raster object, so we can write it to disk and open in a GIS program.
-writeRaster(sfm_dem,"./Webinar4_Point_Clouds/data/output_DEM.tif",overwrite=TRUE)
-
 ##Plots DEM triangulation.
-#plot_dtm3d(sfm_dem, bg = "white",axis=TRUE) 
+plot_dtm3d(sfm_dem, bg = "white",axis=TRUE) 
+
+
+##This is a raster object, so we can write it to disk and 
+##open in a GIS program.
+writeRaster(sfm_dem,"./Webinar4_Point_Clouds/data/output_DEM.tif",
+            overwrite=TRUE)
+
 
 ##Subtracts ground elevation to get a normalized cloud.
 sfm_norm <- normalize_height(sfm_classed,algorithm=tin())
 
 ##Plots normalized cloud
-#plot(sfm_norm,color="Z", bg = "white",axis=TRUE,legend=TRUE)
+plot(sfm_norm,color="Z", bg = "white",axis=TRUE,legend=TRUE)
 
 ##Creates a vegetation index to filter out structures.
 sfm_norm@data$GCC <- sfm_norm@data$G / 
                     (sfm_norm@data$R + sfm_norm@data$G + sfm_norm@data$B)
-#plot(sfm_norm,color="GCC",bg="white",axes=TRUE,legend=TRUE,trim=0.4)
+plot(sfm_norm,color="GCC",bg="white",axes=TRUE,legend=TRUE,trim=0.4)
 
 sfm_norm <- filter_poi(sfm_norm,GCC > 0.44)
 
@@ -75,7 +79,7 @@ f <- function(x) {
 
 heights <- seq(-5,30,0.5)
 ws <- f(heights)
-#plot(heights, ws, type = "l",  ylim = c(0,6))
+plot(heights, ws, type = "l",  ylim = c(0,6))
 
 sfm_ttops <- find_trees(sfm_norm,
                         algorithm=lmf(ws=f,hmin=1,shape="circular"))
