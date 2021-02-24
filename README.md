@@ -15,7 +15,7 @@ Designing Robust Field Studies using Geospatial Tools. How to optimize site sele
 Successful Drone Data Collection in Mountain Environments. How to design and execute UAS flights for high-quality scientific data in challenging environments. [Slides](https://github.com/ikb-rmbl/SpatialDataScienceWebinars2020/blob/master/Webinar3_Drone_Planning/slides/SpatialDataScienceWebinar3_drones.pdf)| Notes | [Resources](https://github.com/ikb-rmbl/SpatialDataScienceWebinars2020/tree/master/Webinar3_Drone_Planning/resources) | [Webinar Recording](https://youtu.be/Pq8btEZRCvM)
 
 # Tuesday February 23rd, 2021 
-Leveraging Point Cloud Data from Lidar and UAS Photogrammetry. Mapping vegetation structure and function using 3D data from lidar and drones.
+Leveraging Point Cloud Data from Lidar and UAS Photogrammetry. Mapping vegetation structure and function using 3D data from lidar and drones. [Slides](https://github.com/ikb-rmbl/SpatialDataScienceWebinars2020/blob/master/Webinar4_Point_Clouds/slides/SpatialDataScienceWebinar4_pointclouds.pdf)| Notes | Resources | [Webinar Recording](https://youtu.be/_WN-81Z-eBE)
 
 # Tuesday March 23rd, 2021 
 Linking Field Data with Remote Sensing for Spatial Prediction. How to leverage high-resolution remote sensing from imaging spectroscopy and lidar to map species, traits, and processes.
