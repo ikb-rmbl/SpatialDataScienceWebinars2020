@@ -17,7 +17,7 @@ Successful Drone Data Collection in Mountain Environments. How to design and exe
 # Tuesday February 23rd, 2021 
 Leveraging Point Cloud Data from Lidar and UAS Photogrammetry. Mapping vegetation structure and function using 3D data from lidar and drones. [Slides](https://github.com/ikb-rmbl/SpatialDataScienceWebinars2020/blob/master/Webinar4_Point_Clouds/slides/SpatialDataScienceWebinar4_pointclouds.pdf)| Notes | Resources | [Webinar Recording](https://youtu.be/_WN-81Z-eBE)
 
-# Tuesday March 23rd, 2021 
+# Tuesday March 30th, 2021 
 Linking Field Data with Remote Sensing for Spatial Prediction. How to leverage high-resolution remote sensing from imaging spectroscopy and lidar to map species, traits, and processes.
 
 # Tuesday April 20th, 2021 
