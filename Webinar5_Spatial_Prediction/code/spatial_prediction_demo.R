@@ -7,7 +7,10 @@ install.packages(c("raster","rgdal","sf","readr",
                    "dplyr","tibble","tidymodels",
                    "parsnip","tidymodels","keras",
                    "xgboost","kernlab","mgcv",
-                   "foreach","future","doFuture"))
+                   "foreach","future","doFuture",
+                   "TileManager","foreach","progress",
+                   "doParallel","RhpcBLASctl","gdalUtils"))
+
 
 #### Assemble and extract features ####
 library(raster)
