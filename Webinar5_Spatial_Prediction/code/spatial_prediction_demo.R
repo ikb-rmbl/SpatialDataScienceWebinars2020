@@ -43,8 +43,8 @@ decid_labeled <- st_read("./Webinar5_Spatial_Prediction/data/UG_decid_labels_fea
 library(mgcv)
 
 ##Does some feature engineering to create brightness-normalized colors.
-plot(train_points$UG_rgbn_oct2017_1m_v1.1,
-     train_points$UG_rgbn_oct2017_1m_v1.2,
+plot(decid_labeled$UG_rgbn_oct2017_1m_v1.1,
+     decid_labeled$UG_rgbn_oct2017_1m_v1.2,
      xlab="Red 2017",ylab="Green 2017",pch=".")
 
 decid_labeled$Brightness_2019 <- rowSums(cbind(decid_labeled$UG_rgbn_sept2019_1m_v1.1,
@@ -114,10 +114,10 @@ evaluate_accuracy <- function(conf_mat){
                     "FalseNegativeRate"=fnr))
 }
 
-gam_train_mat <- table(decid_train$Train_Decid,
-                       decid_train$gam_class)
-gam_test_mat <- table(decid_test$Train_Decid,
-                       decid_test$gam_class)
+gam_train_mat <- table(gam_train$Train_Decid,
+                       gam_train$gam_class)
+gam_test_mat <- table(gam_test$Train_Decid,
+                       gam_test$gam_class)
 
 evaluate_accuracy(gam_train_mat)
 evaluate_accuracy(gam_test_mat)
@@ -230,7 +230,7 @@ xgb_final_fit <- xgb_final_wf %>%
 
 ##Writes tuned model to an R object.
 saveRDS(xgb_final_fit,"./Webinar5_Spatial_Prediction/output/xgb_fit.RDS")
-xgb_final_fit <- readRDS("./output/decid_xgb_trained.RDS")
+xgb_final_fit <- readRDS("./Webinar5_Spatial_Prediction/output/xgb_fit.RDS")
 
 ## XGB Training results
 xgb_tr_results <- 
