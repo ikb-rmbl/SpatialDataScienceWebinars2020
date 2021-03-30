@@ -525,5 +525,5 @@ gdalbuildvrt(tile_paths,"./Webinar5_Spatial_Prediction/output/tile_mosaic.vrt")
 
 ##Reads in as an R object.
 pred_mosaic <- brick("./Webinar5_Spatial_Prediction/output/tile_mosaic.vrt")
-plot(pred_mosaic)
+plot(pred_mosaic,zlim=c(0,10000))
 
