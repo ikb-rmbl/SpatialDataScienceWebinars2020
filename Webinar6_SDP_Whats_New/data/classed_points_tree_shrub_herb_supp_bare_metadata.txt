@@ -2,6 +2,10 @@ Metadata for "supplemental_points_tree_shrub_herb_supp_bare.csv"
 
 This dataset is a compilation of training data for supervised classification of the 2018 East River NEON AOP dataset. The compilation was done by Ian Breckheimer at Rocky Mountain Biological Laboratory (ikb@rmbl.org). Sources include field-identified tree shrub and herb pure pixels collected in the East River 2018 AOP field campaign, as well as meadow plot data collected as part of that same campaign. Meadow plots consisting of greater than 50% horizontal cover of a single species are classified by species, and meadow plots without a single dominant were classified according to elevation substrate, hillslope position, and apparent greenness (NDVI). The field-classified data was supplemented by additional points for several species that were heads-up digitized from 3cm resolution UAV imagery collected in summer of 2019, as well as supplemental points representing non-vegetated cover classes, which were heads-up digitized from high-resolution aerial imagery (NAIP DOQQs),1:24,000 scale geologic maps prepared by the Colorado Geological Survey, and local field knowledge. Point coordinates represent plot centers (determined by averaging corner coordinates), or the centers of field-digitized tree and shrub crowns.
 
+This dataset was compiled by Ian Breckheimer, and is shared under a Creative Commons Attribution 4.0 License (CCby4.0). Field data collected as part of the NEON AOP campaign has been archived in ESS-DIVE: 
+
+Chadwick K D ; Grant K ; Henderson A ; Breckheimer I ; Williams C F R ; Falco N ; Chen J ; Henry H ; Khurram A ; Lamb J ; McCormick M ; McOmber H ; Pierce S ; Polussa A ; Hastings Porro M ; Scott A ; Wu Singh H ; Whitney B ; Brodie E ; Carroll R ; Dewey C ; Kueppers L ; Maavara T ; Steltzer H ; Williams K ; Maher K (2020): Locations, metadata, and species cover from field sampling survey associated with NEON AOP survey, East River, CO 2018. Watershed Function SFA. doi:10.15485/1618130
+
 Variable	Type	Units	Explanation
 SampleID	Categorical	None	Unique identifier for each sample.
 longitude	Numeric	Decimal Degrees	longitude of sample in WGS84 geographic coordinates.
