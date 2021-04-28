@@ -21,4 +21,4 @@ Leveraging Point Cloud Data from Lidar and UAS Photogrammetry. Mapping vegetatio
 Linking Field Data with Remote Sensing for Spatial Prediction. How to leverage high-resolution remote sensing from imaging spectroscopy and lidar to map species, traits, and processes. [Slides](https://github.com/ikb-rmbl/SpatialDataScienceWebinars2020/blob/master/Webinar5_Spatial_Prediction/Slides/SpatialDataScienceWebinar5_spatial_prediction.pdf)| Notes | Resources | [Webinar Recording](https://youtu.be/6fUP7VrfIfM)
 
 # Tuesday April 27th, 2021 
-What’s New in the RMBL Spatial Data Platform. Introduction to new datasets that form part of the SDP Release 2 and Release 3.
+What’s New in the RMBL Spatial Data Platform. Introduction to new datasets that form part of the SDP Release 2 and Release 3. [Slides](https://github.com/ikb-rmbl/SpatialDataScienceWebinars2020/blob/master/Webinar6_SDP_Whats_New/slides/SpatialDataScienceWebinar6_SDP_whats_new.pdf) | Notes | Resources | [Webinar Recording](https://youtu.be/DGXOfU4ZRsU)
