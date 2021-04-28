@@ -2,6 +2,9 @@
 Github repository for code and lecture notes associated with the RMBL 2020 Spatial Data Science Webinar Series. To find out more about the series, please visit:
 https://www.rmbl.org/scientists/resources/spatial-data-platform/
 
+All of the webinar recordings are now collected as a playlist on YouTube:
+https://www.youtube.com/playlist?list=PLWKUbU6otTWBwZ-siRyrw6BfKyOx9gsTe
+
 The schedule for the series is below:
 
 # Tuesday September 22nd 2020
